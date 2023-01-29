@@ -1,0 +1,16 @@
+2019-12-16T10:46:13+00:00 CRITICAL Cannot redeclare login_by_email() (previously declared in V:\home\maosfood.vs\www\wp-content\themes\astra\functions.php:196) у V:\home\maosfood.vs\www\wp-content\themes\astra\functions.php доступно 227
+
+2019-12-16T10:46:19+00:00 CRITICAL Cannot redeclare login_by_email() (previously declared in V:\home\maosfood.vs\www\wp-content\themes\astra\functions.php:196) у V:\home\maosfood.vs\www\wp-content\themes\astra\functions.php доступно 227
+
+2019-12-16T12:45:31+00:00 CRITICAL Maximum execution time of 30 seconds exceeded у V:\home\maosfood.vs\www\wp-content\plugins\polylang\frontend\frontend-filters-links.php доступно 279
+
+2019-12-16T14:13:59+00:00 CRITICAL syntax error, unexpected '?', expecting end of file у V:\home\maosfood.vs\www\wp-content\themes\astra\header.php доступно 49
+
+2019-12-16T15:14:20+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) у V:\home\maosfood.vs\www\wp-content\themes\astra\header.php доступно 49
+
+2019-12-16T15:14:40+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) у V:\home\maosfood.vs\www\wp-content\themes\astra\header.php доступно 49
+
+2019-12-16T16:12:57+00:00 CRITICAL Maximum execution time of 30 seconds exceeded у V:\home\maosfood.vs\www\wp-content\plugins\polylang\frontend\frontend-filters-links.php доступно 285
+
+2019-12-16T16:22:22+00:00 CRITICAL Maximum execution time of 30 seconds exceeded у V:\home\maosfood.vs\www\wp-content\plugins\polylang\frontend\frontend-filters-links.php доступно 286
+

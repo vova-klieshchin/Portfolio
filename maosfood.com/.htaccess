@@ -1,0 +1,224 @@
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+  
+  RewriteRule .htaccess - [F]
+  
+  # Redirect non-www to www
+  # RewriteCond %{HTTP_HOST} ^(?!www\.)(.+) [NC]
+  # RewriteRule ^(.*) http%{ENV:protossl}://www.%1/$1 [R=301,NE,L]
+  
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+  RewriteRule ^(.*) http%{ENV:protossl}://%1/$1 [R=301,NE,L]
+  
+  # Redirect http to https
+  # RewriteCond %{SERVER_PORT} !^443$
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [QSA,R=301,L]
+  
+  RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+  RewriteCond %{QUERY_STRING} (_)?(request|globals)(=|\[|\%[0-9a-zA-Z]+) [NC]
+  RewriteRule ^ - [L,R=404]
+  
+  RewriteCond %{HTTP_REFERER} !^$ [NC]
+  RewriteCond %{HTTP_REFERER} !^http [NC]
+  RewriteRule ^ - [L,R=404]
+  
+  RewriteCond %{REQUEST_URI}  /(favicon|css) [NC]
+  RewriteCond %{HTTP_REFERER} ^$ [NC]
+  RewriteRule ^ - [L,R=403]
+  
+  RewriteCond %{REQUEST_URI} !/(robots)\.txt$ [NC]
+  RewriteCond %{REQUEST_URI} \.txt$ [NC]
+  RewriteRule ^ - [L,R=404]
+  
+  RewriteCond %{HTTP_USER_AGENT} (Google|Bing|Yandex|Yahoo|Baidu|ASK|AOL|Pingdom|IONOS|YouTube) [NC]
+  RewriteRule ^ - [E=SEARCH_ENGINE_REQUEST:%1]
+  
+  RewriteCond %{REQUEST_URI}  \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot) [NC,OR]
+  RewriteCond %{QUERY_STRING} ext=(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot) [NC,OR]
+  RewriteCond %{QUERY_STRING} \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
+  RewriteRule ^ - [E=MEDIA_REQUEST:%1]
+  
+  RewriteCond %{ENV:SEARCH_ENGINE_REQUEST} ^$ [NC]
+  RewriteCond %{HTTP_USER_AGENT}           (msie\s6|msie\s7|msie\s8|msie\s9|bot|domain|photon|python|github|spider|crawler|webmaster|script|curl|wget|block|agent|provider) [NC]
+  RewriteRule ^ - [L,R=404]
+  
+  RewriteCond %{HTTP:Accept}          ^(-|\*)?$ [NC,OR]
+  RewriteCond %{HTTP:Accept-Encoding} ^(-|\*)?$ [NC,OR]
+  RewriteCond %{HTTP:Accept-Language} ^(-|\*)?$ [NC]
+  RewriteRule ^ - [E=SCRIPT_REQUEST:yes]
+  
+  RewriteCond %{ENV:SEARCH_ENGINE_REQUEST} ^$ [NC]
+  RewriteCond %{ENV:SCRIPT_REQUEST}        !^$ [NC]
+  RewriteRule ^ - [L,R=404]
+  
+  RewriteCond %{HTTP_REFERER} ^http://(www\.)?(google|bing|yandex|yahoo|baidu|ask|aol|pingdom|ionos|youtube)\. [NC]
+  RewriteRule ^ - [L,R=404]
+  
+  # RewriteCond expr "! %{HTTP_REFERER} -strmatch '*://%{HTTP_HOST}/*'" [NC]
+  # RewriteCond %{ENV:SEARCH_ENGINE_REQUEST} ^$ [NC]
+  # RewriteCond %{ENV:MEDIA_REQUEST}         !^$ [NC]
+  # RewriteRule ^ - [L,R=403]
+  
+  RewriteRule ^index\.php$ - [L]
+
+</IfModule>
+
+DirectoryIndex index.php index.html index.htm
+AddDefaultCharset windows-1251
+DefaultLanguage en-US
+
+ErrorDocument 403 /err-403-forbidden.html
+ErrorDocument 404 /err-404-not-found.html
+ErrorDocument 503 /err-503-service-temporarily-unavailable.html
+
+RewriteRule ^wp-content/logs/ - [L,R=404]
+
+RewriteRule ^([A-Za-z-_]{2,7}+)/(err|error)-(403|404|503)+([A-Za-z0-9-]+).html$ /index.php?error=$3 [QSA,L]
+RewriteRule ^(err|error)-(403|404|503)+([A-Za-z0-9-]+).html$ /index.php?error=$2 [QSA,L]
+
+
+<IfModule mod_mime.c>
+  AddType image/x-icon .ico
+  AddType application/x-javascript .js
+  AddType text/css .css
+</IfModule>
+
+<ifModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</ifModule>
+
+<ifModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+<ifModule mod_headers.c>
+
+  <filesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "max-age=2592000, public"
+	Header set X-Robots-Tag "noindex, nofollow, noimageindex, noarchive"
+  </filesMatch>
+  
+  <filesMatch "\.(html)$">
+	Header set X-Robots-Tag "noimageindex, noarchive"
+  </filesMatch>
+  
+  Header always append X-Frame-Options "sameorigin"
+  
+  Header set X-Content-Type-Options "nosniff"
+  
+</ifModule>
+
+<IfModule mod_expires.c>
+
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 week"
+  ExpiresByType image/jpeg "access plus 1 week"
+  ExpiresByType image/gif "access plus 1 week"
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 15 days"
+  ExpiresByType image/svg "access plus 1 month"
+  ExpiresByType application/font-woff "access plus 1 month"
+  ExpiresByType application/font-eot "access plus 1 month"
+  ExpiresByType application/font-ttf "access plus 1 month"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType text/html "access plus 1 week"
+  ExpiresByType application/xhtml+xml "access plus 1 week"
+  ExpiresByType application/pdf "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType text/x-javascript "access plus 1 week"
+  ExpiresByType application/manifest+json "access plus 15 days"
+  ExpiresDefault "access plus 15 days"
+
+</IfModule>
+
+<IfModule pagespeed_module>
+
+   ModPagespeed on
+   ModPagespeedPreserveUrlRelativity on
+   ModPagespeedEnableFilters recompress_images
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+  RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.php [QSA,L]
+
+</IfModule>
+
+<FilesMatch ".(ini|sql|db)$">
+  Require all denied
+</FilesMatch>
+
+<FilesMatch "config\.(ini|php)$">
+  Require all denied
+</FilesMatch>
+
+<Files .htpasswd> 
+  <RequireAny>
+    <RequireAll>
+      Require all denied
+    </RequireAll>
+  </RequireAny>
+</Files>
+
+# Domain mode
+SetEnvIf Host ".(com)$" MODE=PRODUCTION
+SetEnvIf Host ".(vs)$"  MODE=DEVELOPMENT
+
+<RequireAny>
+  <RequireAll>
+    Require all granted
+  </RequireAll>
+</RequireAny>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

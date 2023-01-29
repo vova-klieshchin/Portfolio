@@ -1,0 +1,6 @@
+<RequireAny>
+  <RequireAll>
+    Require all denied
+    # Require all granted
+  </RequireAll>
+</RequireAny>

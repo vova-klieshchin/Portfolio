@@ -1,0 +1,8 @@
+2019-11-13T12:15:13+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в V:\home\maosfood.vs\www\wp-includes\wp-db.php на строке 2007
+
+2019-11-13T13:21:39+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в V:\home\maosfood.vs\www\wp-admin\includes\class-wp-internal-pointers.php на строке 15
+
+2019-11-13T13:21:43+00:00 CRITICAL Maximum execution time of 30 seconds exceeded в V:\home\maosfood.vs\www\wp-includes\wp-db.php на строке 2007
+
+2019-11-13T13:23:52+00:00 CRITICAL Out of memory (allocated 41943040) (tried to allocate 65536 bytes) в V:\home\maosfood.vs\www\wp-includes\pomo\mo.php на строке 315
+

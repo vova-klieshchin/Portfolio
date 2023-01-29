@@ -1,0 +1,77 @@
+Time: 18:45:35
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-admin/admin-ajax.php
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+
+Time: 18:45:51
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-login.php?interim-login=1&wp_lang=ru_RU
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+
+Time: 18:47:35
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-admin/admin-ajax.php
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+
+Time: 18:49:36
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-admin/admin-ajax.php
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+
+Time: 18:51:37
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-admin/admin-ajax.php
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+
+Time: 18:53:38
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-admin/admin-ajax.php
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+
+Time: 18:55:39
+IP address: 127.0.0.1
+Provider: www.phpmyadmin.vs
+Request: https://maosfood.vs/wp-admin/admin-ajax.php
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36
+Referer: https://maosfood.vs/wp-admin/edit.php?post_type=product&page=product_importer&step=mapping&file=V:/home/maosfood.vs/www/wp-content/uploads/2019/11/15.11.19-1-1.csv&delimiter=,&update_existing=1&_wpnonce=8108521c33
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+{"error":"The address 127.0.0.1 is not in the database."}
+

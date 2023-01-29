@@ -1,0 +1,14 @@
+[13-Nov-2019 12:15:13 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in V:\home\maosfood.vs\www\wp-includes\wp-db.php on line 2007
+[13-Nov-2019 13:21:34 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in V:\home\maosfood.vs\www\wp-content\plugins\woocommerce\includes\wc-term-functions.php on line 100
+[13-Nov-2019 13:21:35 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in V:\home\maosfood.vs\www\wp-content\plugins\woocommerce\includes\tracks\class-wc-tracks.php on line 11
+[13-Nov-2019 13:21:38 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in V:\home\maosfood.vs\www\wp-content\plugins\wordpress-seo\wp-seo-main.php on line 66
+[13-Nov-2019 13:21:39 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in V:\home\maosfood.vs\www\wp-admin\includes\class-wp-internal-pointers.php on line 15
+[13-Nov-2019 13:21:43 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in V:\home\maosfood.vs\www\wp-includes\wp-db.php on line 2007
+[13-Nov-2019 13:23:51 UTC] PHP Fatal error:  Out of memory (allocated 41943040) (tried to allocate 65536 bytes) in V:\home\maosfood.vs\www\wp-includes\pomo\mo.php on line 315
+[13-Nov-2019 13:23:51 UTC] PHP Fatal error:  Out of memory (allocated 41943040) (tried to allocate 57344 bytes) in V:\home\maosfood.vs\www\wp-includes\pomo\streams.php on line 205
+[13-Nov-2019 13:23:51 UTC] PHP Fatal error:  Out of memory (allocated 8388608) (tried to allocate 4096 bytes) in V:\home\maosfood.vs\www\wp-includes\pomo\mo.php on line 323
+[13-Nov-2019 13:23:51 UTC] PHP Fatal error:  Out of memory (allocated 41943040) (tried to allocate 65536 bytes) in V:\home\maosfood.vs\www\wp-includes\pomo\mo.php on line 315
+[13-Nov-2019 13:23:51 UTC] PHP Fatal error:  Out of memory (allocated 10485760) (tried to allocate 4096 bytes) in V:\home\maosfood.vs\www\wp-includes\pomo\mo.php on line 323
+[13-Nov-2019 13:23:51 UTC] PHP Fatal error:  Out of memory (allocated 41943040) (tried to allocate 65536 bytes) in V:\home\maosfood.vs\www\wp-includes\pomo\mo.php on line 315
+[25-Nov-2019 09:08:08 UTC] PHP Fatal error:  Out of memory (allocated 35651584) (tried to allocate 262144 bytes) in V:\home\maosfood.vs\www\wp-includes\cache.php on line 676
+[16-Dec-2019 10:46:37 UTC] PHP Fatal error:  Cannot redeclare login_by_email() (previously declared in V:\home\maosfood.vs\www\wp-content\themes\astra\functions.php:196) in V:\home\maosfood.vs\www\wp-content\themes\astra\functions.php on line 227

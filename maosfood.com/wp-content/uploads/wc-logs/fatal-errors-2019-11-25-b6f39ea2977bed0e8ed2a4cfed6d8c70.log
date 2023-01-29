@@ -1,0 +1,4 @@
+2019-11-25T09:08:08+00:00 CRITICAL Out of memory (allocated 35651584) (tried to allocate 262144 bytes) в V:\home\maosfood.vs\www\wp-includes\cache.php на строке 676
+
+2019-11-25T09:09:02+00:00 CRITICAL Out of memory (allocated 20971520) (tried to allocate 32768 bytes) у V:\home\maosfood.vs\www\wp-content\plugins\smart-slider-3\library\smartslider\plugins\widgetthumbnail\default\default.php доступно 304
+
