@@ -1,5 +1,0 @@
-Sitemap: https://artikphoto.com/sm.xml
-
-# Group 1
-User-agent: *
-Allow: /
